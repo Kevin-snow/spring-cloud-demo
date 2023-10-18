@@ -1,2 +1,13 @@
 server:
-  port: 8201
+  port: 8203
+spring:
+  application:
+    name: order-nacos-demo
+  #配置nacos服务端
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      discovery:
+        username: nacos
+        password: nacos
+        namespace: public

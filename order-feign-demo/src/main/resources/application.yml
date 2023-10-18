@@ -1,10 +1,8 @@
 server:
-  port: 8204
-
+  port: 8040
 spring:
   application:
-    name: store-nacos-demo
-
+    name: order-nacos-demo
   #配置nacos服务端
   cloud:
     nacos:

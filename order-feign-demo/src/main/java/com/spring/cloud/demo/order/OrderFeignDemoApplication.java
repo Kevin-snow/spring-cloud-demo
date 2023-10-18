@@ -2,18 +2,16 @@ package com.spring.cloud.demo.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class OrderDemoApplication {
-
+@EnableFeignClients
+public class OrderFeignDemoApplication {
     public static void main(String[] args) {
-        SpringApplication.run(OrderDemoApplication.class, args);
-    }
-
-    @Bean
-    public RestTemplate getRestTemplate(){
-        return new RestTemplate();
+        SpringApplication.run(OrderFeignDemoApplication.class, args);
     }
 }
