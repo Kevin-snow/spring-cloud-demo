@@ -11,3 +11,17 @@ spring:
         username: nacos
         password: nacos
         namespace: public
+#feign日志全局配置
+logging:
+  level:
+    com.spring.cloud.demo.order.feign: debug
+feign:
+  client:
+    config:
+      member-nacos-demo:
+#        loggerLevel: HEADERS
+        contract: feign.Contract.Default
+        connecTimeout: 5000
+        readTimeout: 4000
+        requestInterceptors[0]:
+          com.spring.cloud.demo.order.interceptor.FeignInterceptor

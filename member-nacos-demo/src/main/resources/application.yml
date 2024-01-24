@@ -1,0 +1,15 @@
+server:
+  port: 8026
+
+spring:
+  application:
+    name: member-nacos-demo
+
+  #配置nacos服务端
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      discovery:
+        username: nacos
+        password: nacos
+        namespace: public

@@ -9,6 +9,7 @@
         <module>order-nacos-demo</module>
         <module>store-nacos-demo</module>
         <module>order-feign-demo</module>
+        <module>member-nacos-demo</module>
     </modules>
 <!--    <parent>-->
 <!--        <groupId>org.springframework.boot</groupId>-->
